@@ -1,0 +1,311 @@
+.view-salary-container {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #334155;
+}
+
+.header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1e293b;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔹 pushes Back button to end */
+  margin-bottom: 1rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.back-btn {
+  padding: 6px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 3rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-container input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Back Button */
+.back-btn {
+  background-color: #3b82f6; /* Primary blue */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem; /* spacing between arrow & text */
+}
+
+.back-btn::before {
+  content: "←"; /* left arrow */
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.back-btn:active {
+  transform: scale(0.96);
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.salary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.salary-table th {
+  background-color: #4f46e5;
+  color: white;
+  text-align: left;
+  font-weight: 600;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.salary-table td {
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.salary-table tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.salary-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.salary-table tbody tr:hover {
+  background-color: #eff6ff;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: white;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+.action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.edit-btn {
+  background-color: #2563eb;
+}
+
+.edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.save-btn {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #16a34a;
+}
+
+.cancel-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #dc2626;
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.no-data-message {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+}
+
+/* Specific styles for the delete confirmation modal to match the rest */
+.delete-modal .form-actions {
+  justify-content: center;
+}
+.payroll-period-selector {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.payroll-period-selector select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.download-btn {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #45a049;
+}

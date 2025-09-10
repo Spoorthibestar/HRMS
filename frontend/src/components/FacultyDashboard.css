@@ -1,0 +1,90 @@
+/* Base HTML and body styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent full-page scroll */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #003973, #e5e5e5);
+}
+
+/* Root container */
+
+.faculty-dashboard {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Main white card with vertical scroll */
+.dashboard-content {
+  width: 200%;
+  max-width: 1400px;
+  height: 95vh;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  overflow-y: auto;     /* Enable vertical scroll */
+  overflow-x: hidden;   /* Disable horizontal scroll */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #003973;
+  font-weight: bold;
+}
+
+/* Section card spacing */
+.section-card {
+  margin-bottom: 40px;
+}
+
+/* Section headings */
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #dae1e8;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #003973;
+}
+
+/* Grid layout for form fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Form field layout */
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.field-value {
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}

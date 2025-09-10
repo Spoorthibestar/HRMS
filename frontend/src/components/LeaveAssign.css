@@ -1,0 +1,334 @@
+/* LeaveAssign.css */
+.leave-assign-container {
+  width: 95%;
+  margin: 0 auto;
+  max-height: 90vh;
+  padding: 20px;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.leave-assign-container h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.fiscal-year {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fiscal-year label {
+  font-weight: bold;
+}
+
+.fiscal-year input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  width: 250px;
+}
+
+.search-btn {
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: white;
+  border: 1px solid #3498db;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn:hover {
+  background-color: #2980b9;
+}
+
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leave-table th,
+.leave-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.leave-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.leave-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.leave-table input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.empty-cell {
+  color: #999;
+  font-style: italic;
+}
+
+.edit-btn, .save-btn, .cancel-btn {
+  padding: 6px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.save-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #27ae60;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  width: 50%;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 auto;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #28a745;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.disabled-field {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.leave-balance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.leave-balance-table th, 
+.leave-balance-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.leave-balance-table th {
+  background-color: #f5f5f5;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #0069d9;
+}
+
+.check-balance-btn {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.check-balance-btn:hover {
+  background-color: #0069d9;
+}
+
+@media (max-width: 768px) {
+  .controls-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-input {
+    width: 200px;
+  }
+  
+  .leave-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .leave-assign-container {
+    width: 100%;
+    padding: 10px;
+  }
+}

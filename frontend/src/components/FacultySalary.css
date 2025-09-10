@@ -1,0 +1,171 @@
+/* Container for the salary page */
+.salary-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Card styling */
+.salary-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Page title */
+.salary-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Error message */
+.error-message {
+  color: #d9534f;
+  background-color: #fcebea;
+  border: 1px solid #f5c2c7;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Salary table */
+.salary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.salary-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.salary-table td strong {
+  color: #444;
+}
+
+/* Added style for the new gross salary row */
+.salary-table .subtotal-row td {
+  font-weight: bold;
+  color: #2c3e50;
+  background-color: #e9ecef;
+}
+
+.salary-table .total-row td {
+  font-weight: bold;
+  color: #fff;
+  background-color: #4b6cb7;
+  border-top: 2px solid #fff;
+}
+
+/* Style for the horizontal rules */
+.salary-table hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+/* Back button */
+.back-btn {
+  background-color: #4b6cb7;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #3a529d;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Password Form Styles */
+.password-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.back-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.message {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.message.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.message.error {
+  background-color: #f2dede;
+  color: #a94442;
+}

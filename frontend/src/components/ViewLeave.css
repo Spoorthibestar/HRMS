@@ -1,0 +1,191 @@
+/* ViewLeave.css */
+.leave-assign-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 95%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.leave-assign-container h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.fiscal-year {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.fiscal-year label {
+  font-weight: 600;
+  margin-right: 0.8rem;
+  color: #495057;
+}
+
+.fiscal-year input {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 80px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.leave-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08);
+}
+
+.leave-table th {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.leave-table th:first-child {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.leave-table td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  color: #495057;
+}
+
+.leave-table td:first-child {
+  text-align: left;
+  padding-left: 1.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.leave-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.leave-table tr:hover {
+  background-color: #f1f8fe;
+}
+
+.leave-table input {
+  width: 60px;
+  padding: 0.4rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.leave-table input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Save Button - GREEN */
+.save-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Cancel Button - RED */
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+.leave-table button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  min-width: 70px;
+}
+
+.leave-table button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this to your existing CSS */
+.empty-cell {
+  color: #999;
+  font-style: italic;
+}
+
+.leave-table button:active {
+  transform: translateY(0);
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .leave-assign-container {
+    padding: 1rem;
+  }
+  
+  .leave-table {
+    font-size: 0.9rem;
+  }
+  
+  .leave-table th, 
+  .leave-table td {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leave-assign-container {
+    overflow-x: auto;
+  }
+  
+  .leave-table {
+    min-width: 800px;
+  }
+}
